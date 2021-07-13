@@ -10,13 +10,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="mohanFlow" doc:id="52f44b8e-6fea-45ac-b242-1d9b327efb1e" >
 		<http:listener doc:name="Listener" doc:id="51349fb0-fae0-4f59-8f0b-daaa22247dd8" config-ref="HTTP_Listener_config" path="/api"/>
-		<ee:transform doc:name="Transform Message" doc:id="3d384c5f-cead-4dba-bfdc-3d35bbb2db6a" >
-			<ee:message >
-				<ee:set-payload ><![CDATA[%dw 2.0
-output application/json
----
-"source tree"]]></ee:set-payload>
-			</ee:message>
-		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="4278c1a5-8d4d-4919-b57a-75e70bd7957d" message="#[payload]"/>
 	</flow>
 </mule>
