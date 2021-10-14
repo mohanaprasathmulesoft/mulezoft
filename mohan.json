@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "7dd97233-e6a6-40c2-bc55-f454dbfdb12d",
+		"name": "DEVA-MULE4-pg-abb-ippm-epmv-interfacesdev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post:\\project:",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aaaaaaaa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aaaaa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"HistoricalNumber\": \"2NP1000389\",\r\n  \"DisplayName\": \"TEST_Project_Name\",\r\n  \"Category\": \"RAndDInfrastructure\",\r\n  \"LeaderPrincipal\": \"kornel.scherrer@ch.abb.com\",\r\n  \"PlannedStartDate\": \"2018-09-19T09:52:44.521Z\",\r\n  \"PlannedEndDate\": \"2018-09-19T09:52:44.521Z\",\r\n  \"ProjectReaders\" : [ \"kornel.scherrer@ch.abb.com\"],\r\n  \"TargetedPieId\": 1001,\r\n  \"TargetedSectorIds\": [\r\n    1002\r\n  ],\r\n  \"LeadOrgUnit\": \"3401.1\",\r\n  \"ExecutiveSummary\": \"Test_executive_summary\",\r\n  \"ExecutiveAbstract\": \"Test_ExecutiveAbstract\",\r\n  \"MainDeliverables\": \"TEST_main_delivarables\",\r\n  \"CustomerValue\": \"TEST_Customer_Name\",\r\n  \"AbbValue\": \"TEST_ABB_Value\",\r\n  \"Npv\": 1235,\r\n  \"Irr\": 12345,\r\n  \"Payback\": \"OneYear\",\r\n  \"TargetProductCost\": 123,\r\n  \"AffectedBusinessVolume\": 12345,\r\n  \"EbitImpact\": 12345,\r\n  \"TechnicalTarget\": \"TEST_TechnicalTarget\",\r\n  \"Standards\": [\r\n    \"ANSI\"\r\n  ],\r\n  \"StandardsComments\": \"text\",\r\n  \"MarketTarget\": \"TEST_TargetMarket\",\r\n  \"Customers\": \"TEST_Customers\",\r\n  \"Competitors\": \"TEST_Competitors\",\r\n  \"References\": \"Text\",\r\n  \"GateModel\": \"OnProjectLevel\",\r\n  \"GateStatuses\": [\r\n    {\r\n      \"Gate\": 0,\r\n      \r\n      \"CompletionTargetDate\": \"2018-09-19T09:52:44.521Z\",\r\n      \"ForecastOrActualDate\": \"2018-09-19T09:52:44.521Z\",\r\n      \"Completed\": false\r\n      \r\n    },\r\n    {\r\n      \"Gate\": 2,\r\n      \r\n      \"CompletionTargetDate\": \"2018-10-19T09:52:44.521Z\",\r\n      \"ForecastOrActualDate\": \"2018-10-19T09:52:44.521Z\",\r\n      \"Completed\": false\r\n      \r\n    },\r\n    {\r\n      \"Gate\": 5,\r\n     \r\n      \"CompletionTargetDate\": \"2018-11-19T09:52:44.521Z\",\r\n      \"ForecastOrActualDate\": \"2018-11-19T09:52:44.521Z\",\r\n      \"Completed\": false\r\n      \r\n    }\r\n  ],\r\n  \"TotalBudget\": 12345,\r\n  \"TotalBudgetForecast\" : 12345\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:442/api/pv-norrd/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "442",
+					"path": [
+						"api",
+						"pv-norrd",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post:\\project\\milestones",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aaaaaaaa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aaaaa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"NORRD Project ID\": [\"PRJ-1374\",\r\n\t\"PRJ-1386\",\r\n\t\"PRJ-1388\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:442/api/pv-norrd/project/milestones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "442",
+					"path": [
+						"api",
+						"pv-norrd",
+						"project",
+						"milestones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post:\\project\\financialvalues",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aaaaaaaa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aaaaa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"NORRD Project ID\": [\"PRJ-1880\",\r\n\t\"PRJ-2446\",\r\n\t\"PRJ-2996\"],\r\n\t\"ReportPeriodYear\": [2017]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:442/api/pv-norrd/project/financialvalues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "442",
+					"path": [
+						"api",
+						"pv-norrd",
+						"project",
+						"financialvalues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post:\\project\\attributes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "aaaaaaaa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aaaaa",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"NORRD Project ID\": [\"PRJ-1374\",\r\n\t\"PRJ-1386\",\r\n\t\"PRJ-1388\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:442/api/pv-norrd/project/attributes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "442",
+					"path": [
+						"api",
+						"pv-norrd",
+						"project",
+						"attributes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post:\\norrd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "norrd_resource_name",
+						"value": "project",
+						"type": "text"
+					},
+					{
+						"key": "norrd_resource_params",
+						"value": "?model.freeText=1234",
+						"type": "text"
+					},
+					{
+						"key": "callerMessageID",
+						"value": "eeb77c40-7cfa-11e7-a7f3-462c20524122",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:442/api/sys-norrd/norrd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "442",
+					"path": [
+						"api",
+						"sys-norrd",
+						"norrd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post:\\norrd",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "norrd_resource_name",
+						"value": "project",
+						"type": "text"
+					},
+					{
+						"key": "norrd_resource_params",
+						"value": "?model.freeText=1234",
+						"type": "text"
+					},
+					{
+						"key": "callerMessageID",
+						"value": "eeb77c40-7cfa-11e7-a7f3-462c20524122",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "asdfvbn",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "sdfgb",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:442/api/sys-norrd/norrd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "442",
+					"path": [
+						"api",
+						"sys-norrd",
+						"norrd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
